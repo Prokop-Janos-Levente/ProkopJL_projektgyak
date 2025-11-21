@@ -18,6 +18,11 @@
                 Console.Clear();
                 Console.WriteLine("0. Kilépés");
                 Console.WriteLine("1. e-mailek listázása");
+                int sorszam = 0;
+                foreach (string e_mail in e_mailok){
+                    Console.WriteLine($"{sorszam++} {e_mail}");
+                }
+                break;
                 Console.WriteLine("2. új e-mail");
                 Console.WriteLine("3. érvényes e-mailok");
                 Console.WriteLine("4. érvényes e-mailok");
