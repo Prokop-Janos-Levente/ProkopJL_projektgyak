@@ -42,7 +42,13 @@
                         int index = Convert.ToInt32(Console.ReadLine());
                         e_mailok.RemoveAt(index);
                         break;
-                    case "4": Console.WriteLine("érvényesek listázás"); break;
+                    case "4": Console.WriteLine("Évényes e-mailok listája");
+                        foreach (string e_mail in e_mailok)
+                        {
+                            if (e_mail.Contains(".") && e_mail.Contains("@"))
+                            Console.WriteLine($"{e_mail}");
+                        }
+                        break;
                     default: Console.WriteLine("rossz parancs"); break;
                 }
                 Console.ReadKey();
